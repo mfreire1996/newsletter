@@ -1,26 +1,25 @@
 const container = document.querySelector(".container");
 const subscribed = document.querySelector(".subscribed");
 const emailInput = document.querySelector(".emailInput");
-const userEmailAddress = document.querySelector(".user-email");
-const monthlyNews = document.querySelector('.subscribe');
+const errorMessage = document.querySelector('#error-message');
 
-
-
-
-container.addEventListener("click", (event) => {
-    if (emailInput.checkValidity()){
-        userEmailAddress.textContent = emailInput.value;
-        container.style.display = "none";
-        subscribed.style.display = "block";
-    }
+container.addEventListener("click", () => {
+  if (emailInput.checkValidity()) {
+    container.style.display = "none";
+    subscribed.style.display = "block";
+  } else {
+    displayError();
+  }
 });
 
-let dismissMessage = () => {
-    subscribed.style.display = "none";
-    container.style.display = "block";
+function dismissMessage() {
+  subscribed.style.display = "none";
+  container.style.display = "block";
 }
 
-
+function displayError() {
+  errorMessage.style.display = "block";
+}
 
 // if(subscriptionBtn.click === true){
 //     return subscribed;

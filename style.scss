@@ -35,9 +35,19 @@ a {
     input {
         padding: 1rem 6.7rem; 
         text-align: justify;
+        border-radius: 5px;
     }
-    
 
+    .btn-message {
+        display: flex;
+        flex-direction: row; 
+        gap: 170px;
+
+        h5:nth-child(2) {
+            display: none;
+            color: hsl(15, 100%, 72%);
+        }
+    }
 
 .subscribe {
     background: $btn;
@@ -51,17 +61,13 @@ a {
 
 .subscribe:hover {
     background: linear-gradient(to right, hsl(352, 79%, 58%), hsl(23, 89%, 54%));
+
+    .subscribe h5:nth-child(2){
+        display: none;
+    }
 }
 
 
-
-    // .subscribe:hover {
-    //     background-position: left bottom;
-    //     background: linear-gradient(to right, hsl(352, 79%, 58%), hsl(23, 89%, 54%));
-    //     transition: .5 ease-out;
-    //     background-size: 200% 100%;
-    //     background-position: right bottom;
-    // }
 }
 }
 
@@ -158,3 +164,7 @@ a {
         transform: translate(-50%, -50%);
     }
 }
+
+.error {
+    background-color: red;
+  }
