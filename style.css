@@ -32,6 +32,16 @@ a {
 .container .container-left input {
   padding: 1rem 6.7rem;
   text-align: justify;
+  border-radius: 5px;
+}
+.container .container-left .btn-message {
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+}
+.container .container-left .btn-message h5:nth-child(2) {
+  display: none;
+  color: hsl(15, 100%, 72%);
 }
 .container .container-left .subscribe {
   background: hsl(246, 43%, 15%);
@@ -44,6 +54,9 @@ a {
 }
 .container .container-left .subscribe:hover {
   background: linear-gradient(to right, hsl(352, 79%, 58%), hsl(23, 89%, 54%));
+}
+.container .container-left .subscribe:hover .subscribe h5:nth-child(2) {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -128,4 +141,7 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+.error {
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
